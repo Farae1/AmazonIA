@@ -33,7 +33,6 @@ def visualize_prediction(model, dataset, device, idx=0):
     img_np = np.transpose(img.numpy(), (1, 2, 0))  # Shape (H, W, 4)
     mask_np = mask.numpy()
 
-    # 🔹 MUDANÇA AQUI: Seleciona apenas os 3 primeiros canais (RGB) para exibir
     #    Assumindo que a ordem é (R, G, B, NIR)
     #    Se for BGR, mude para img_np[:, :, [2, 1, 0]]
     img_to_show = img_np[:, :, :3]
@@ -134,9 +133,9 @@ print(f"Dice médio: {np.mean(all_dice):.3f}")
 # Visualização de exemplo no teste
 # ========================
 print("\n=== Visualizando exemplo de Teste ===")
-# 🔹 MUDANÇA: Cria um Test Dataset para facilitar a visualização
+# MUDANÇA: Cria um Test Dataset para facilitar a visualização
 test_dataset = GeoTiffDataset(test_imgs, test_masks)
 idx = choice(range(len(test_dataset)))
 
-# 🔹 MUDANÇA: Chama a função de visualização com o dataset de TESTE
+# MUDANÇA: Chama a função de visualização com o dataset de TESTE
 visualize_prediction(model, test_dataset, device, idx=idx)
