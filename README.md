@@ -25,12 +25,3 @@ Após isso, para testar a geração de uma mask à partir de uma imagem aleatór
 
 # Parte teórica
 No repositorio, também estará a pesquisa teórica realizada sobre modelos clássicos de Machine Learning, Redes Convulocionais e outros tipos de modelos de Deep Learning
-
-
-
-
-
-
-
-
-    Acurácia de Pixel: Percentual de pixels (floresta e desmatamento) classificados corretamente.
